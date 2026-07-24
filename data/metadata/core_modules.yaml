@@ -1,0 +1,16 @@
+modules:
+  BetaIdentitySecretion:
+    description: "Curated beta-cell identity/secretion module used in prior T2D islet work."
+    genes: [RASGRP1, PPP1R1A, ENTPD3, ADCYAP1, FFAR4, TMED6, PLCXD3, PDE8B, CASR, PFKFB2, ACLY, TGFBR3, ASB9, PPM1K, SLC2A2, GABRA2, INS, IAPP, PDX1, MAFA, NKX6-1]
+  ImmuneStress:
+    description: "Curated immune/stress module used in prior T2D islet work."
+    genes: [MICB, HLA-DRA, HLA-DPA1, IL1R2, IL1RL1, IDO1, SERPING1, FPR3, LTB4R, GBP2, TNFRSF10A, CFH, ADORA3, APOL1]
+  ERStress_UPR:
+    description: "Unfolded protein response and ER stress markers relevant to beta-cell dysfunction."
+    genes: [HSPA5, XBP1, DDIT3, ATF4, ATF6, EIF2AK3, ERN1, HERPUD1, DNAJB9, PDIA4, EDEM1, SEL1L]
+  OxidativePhosphorylation:
+    description: "Mitochondrial energy metabolism markers; use carefully with mitochondrial QC."
+    genes: [NDUFA1, NDUFB5, NDUFS1, SDHA, SDHB, UQCRC1, COX4I1, COX5A, ATP5F1A, ATP5F1B, ATP5MC1]
+  DedifferentiationStress:
+    description: "Candidate beta-cell dedifferentiation/stress markers."
+    genes: [ALDH1A3, SOX9, HES1, MYC, LDHA, REST, NEUROG3, CDKN1A, CDKN2A]

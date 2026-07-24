@@ -1,0 +1,67 @@
+datasets:
+  GSE221156:
+    role: primary
+    modality: scRNA-seq
+    organism: Homo sapiens
+    tissue: pancreatic islets
+    disease_groups: [ND, PD, T2D]
+    donors: {ND: 17, PD: 14, T2D: 17}
+    cells_reported: 245878
+    priority: 1
+    notes: "Large 10x human islet atlas; use as primary discovery. Prefer donor-level beta-cell analysis."
+    source_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221156"
+  GSE153855:
+    role: validation
+    modality: scRNA-seq
+    organism: Homo sapiens
+    tissue: pancreatic islets
+    donors: {control: 6, T2D: 5}
+    priority: 2
+    notes: "High-quality Smart-seq2 T2D/control islet dataset used for differential gene synchronization network analysis."
+    source_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153855"
+  E-MTAB-5061:
+    role: validation
+    modality: scRNA-seq
+    organism: Homo sapiens
+    tissue: pancreas/islets
+    donors: {healthy: 6, T2D: 4}
+    cells_reported: 2942
+    priority: 3
+    notes: "Segerstolpe/Palasantza dataset. Useful for validation; expression distributed as RPKM and curated by EBI/HCA."
+    source_url: "https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-5061"
+  GSE81608:
+    role: validation
+    modality: scRNA-seq
+    organism: Homo sapiens
+    tissue: pancreatic islet endocrine cells
+    cells_reported: 1492
+    priority: 4
+    notes: "Xin et al. single-cell endocrine islet dataset; ND/T2D; alpha, beta, delta, PP cells."
+    source_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE81608"
+  GSE86469:
+    role: validation
+    modality: scRNA-seq
+    organism: Homo sapiens
+    tissue: pancreatic islets/other pancreatic cells
+    donors: {ND: 5, T2D: 3}
+    cells_reported: 638
+    priority: 5
+    notes: "Lawlor et al.; useful as a smaller independent replication cohort."
+    source_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86469"
+  GSE83139:
+    role: cautious_validation
+    modality: scRNA-seq
+    organism: Homo sapiens
+    tissue: endocrine pancreas
+    priority: 6
+    notes: "Contains juvenile, adult control, T1D and T2D donors; use with age/donor-class caution."
+    source_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE83139"
+  GSE164416:
+    role: bulk_module_anchor
+    modality: bulk RNA-seq
+    organism: Homo sapiens
+    tissue: pancreatic islets
+    donors: {ND: 18, IGT: 41, T3cD: 35, T2D: 39}
+    priority: 7
+    notes: "Whole-islet RNA-seq anchor for module validation; not suitable for single-cell probability flux."
+    source_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164416"

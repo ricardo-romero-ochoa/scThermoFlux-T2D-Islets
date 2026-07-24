@@ -1,0 +1,18 @@
+name: scthermoflux
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - pandas>=2.2
+  - scipy>=1.12
+  - scikit-learn>=1.4
+  - matplotlib>=3.8
+  - pyyaml>=6.0
+  - statsmodels>=0.14
+  - anndata>=0.10
+  - scanpy>=1.10
+  - pip
+  - pip:
+      - tqdm>=4.66

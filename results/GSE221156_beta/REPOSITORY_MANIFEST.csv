@@ -1,0 +1,16 @@
+path,size_bytes
+AUDIT_REPORT.md,476
+figures/figure_01_landscape.png,1607096
+figures/figure_02_flux_network.png,497479
+figures/figure_03_donor_statistics.png,192342
+tables/cell_latent_coordinates.csv,12055866
+tables/cell_module_scores.csv,6214391
+tables/cell_state_scores.csv,38255775
+tables/condition_comparison.csv,868
+tables/condition_level_thermo.csv,146
+tables/donor_level_thermo.csv,4718
+tables/edge_flux_table.csv,17397
+tables/global_thermo.csv,47
+tables/microstate_table.csv,3559
+tables/stationary_distribution.csv,600
+tables/transition_matrix.csv,14400

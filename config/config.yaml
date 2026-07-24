@@ -1,0 +1,25 @@
+project:
+  name: scThermoFlux-T2D-Islets
+  primary_dataset: GSE221156
+  default_cell_type: beta
+  default_conditions: [ND, T2D]
+
+analysis:
+  latent_method: pca
+  n_latent: 10
+  n_microstates: 24
+  knn_k: 12
+  transition_beta: 2.5
+  density_k: 25
+  random_seed: 7
+  epsilon: 1.0e-12
+
+statistics:
+  donor_level: true
+  n_bootstrap: 1000
+  alpha: 0.05
+
+figures:
+  dpi: 300
+  show_panel_letters: true
+  embed_figure_titles: false

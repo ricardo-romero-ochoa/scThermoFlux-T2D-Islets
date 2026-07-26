@@ -124,45 +124,23 @@ python scripts/02_run_landscape_flux.py \
 
 For each cell, the workflow computes curated biological module scores and a disease-axis coordinate:
 
-\[
-\text{DiseaseAxis}
-= z(\text{ImmuneStress}) + z(\text{ERStress}) - z(\text{BetaIdentitySecretion}).
-\]
+* $\text{DiseaseAxis} \to z$
+* $\text{ImmuneStress} \to z$
+* $\text{ERStress} \to z$
+* $\text{BetaIdentitySecretion}$
 
-A low-dimensional state representation is built from PCA or provided latent coordinates. Cell-state density is estimated and converted into a dimensionless quasi-potential:
+A low dimensional state representation is built from PCA or provided latent coordinates. Cell state density is estimated and converted into a dimensionless quasi-potential:
 
-\[
-\Phi(x) = -\log[P(x)+\epsilon].
-\]
+$$\Phi(x) = -\log(P(x)) - \epsilon$$
 
-Microstates are constructed using k-means. A Markov kernel is inferred on the microstate graph with optional bias along the disease axis. The probability current is:
+Microstates are constructed using $k$-means. A Markov kernel is inferred on the microstate graph with optional bias along the disease axis. The probability current is:
 
-\[
-J_{ij} = \pi_iK_{ij} - \pi_jK_{ji},
-\]
+$$J_{ij} = \pi_i K_{ij} - \pi_j K_{ji}$$
 
-and the entropy-production-like score is:
+and the entropy production-like score is:
 
-\[
-\sigma = \frac{1}{2}\sum_{i,j} J_{ij}\log\frac{\pi_iK_{ij}+\epsilon}{\pi_jK_{ji}+\epsilon}.
-\]
+$$\sigma = \frac{1}{2} \sum_{i,j} J_{ij} \log\left(\frac{\pi_i K_{ij} + \epsilon}{\pi_j K_{ji} + \epsilon}\right)$$
 
-## Important interpretation limits
-
-- `quasi_potential` is not physical free energy.
-- `entropy_production` is a coarse-grained irreversibility proxy, not total heat dissipation.
-- Cross-sectional ND/T2D data do not prove chronological progression.
-- RNA velocity is not required for this first version. If spliced/unspliced layers are available, velocity-based transition matrices can be added as a later module.
-- Donor-level aggregation is mandatory for valid biological inference.
-
-## Suggested manuscript figures
-
-- **Figure 1:** Conceptual framework: DE versus landscape-flux thermodynamics.
-- **Figure 2:** Synthetic validation: equilibrium, driven, cyclic, and null systems.
-- **Figure 3:** GSE221156 beta-cell quasi-potential landscape.
-- **Figure 4:** Disease-associated probability currents and detailed-balance violation.
-- **Figure 5:** Donor-level thermodynamic statistics and robustness controls.
-- **Figure 6:** Biological module attribution of high-flux transitions.
 
 ## License
 
